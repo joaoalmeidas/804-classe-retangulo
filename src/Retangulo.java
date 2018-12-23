@@ -30,15 +30,18 @@ public class Retangulo {
 
 	public void setAltura(double altura) {
 		
-		if(altura > 0.0 && altura < 20.0) {
+		try {
 			
+			testaLimite(altura);
 			this.altura = altura;
 			
-		}else {
+		}catch(IllegalArgumentException e) {
 			
-			System.out.println(new IllegalArgumentException("A altura deve estar entre 0 e 20"));
+			System.out.println(e.getMessage());
 			
 		}
+		
+		
 	}
 
 	public double getLargura() {
@@ -46,18 +49,28 @@ public class Retangulo {
 	}
 
 	public void setLargura(double largura) {
-		
-		if(largura > 0.0 && largura < 20.0) {
 			
+		try {
+			
+			testaLimite(largura);
 			this.largura = largura;
 			
-		}else {
+		}catch(IllegalArgumentException e) {
 			
-			System.out.println(new IllegalArgumentException("A largura deve estar entre 0 e 20"));
+			System.out.println(e.getMessage());
 			
 		}
 		
+		
+		
 	}
 	
+	public void testaLimite(Double lado) {
+		
+		if(lado <= 0.0 || lado >= 20.0) {
+			throw new IllegalArgumentException("Valor fora dos limites de 0 a 20");
+		}
+		
+	}
 	
 }
