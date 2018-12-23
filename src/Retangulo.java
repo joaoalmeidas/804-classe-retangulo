@@ -4,6 +4,7 @@ public class Retangulo {
 	private double altura;
 	private double largura;
 	
+	
 	public Retangulo() {
 		this(1, 1);
 	}
@@ -19,7 +20,7 @@ public class Retangulo {
 	}
 	
 	public double calculaPerimetro() {
-		return (getAltura() * 2) + (getLargura() * 2);
+		return getAltura() * 2 + getLargura() * 2;
 	}
 	
 
@@ -29,13 +30,13 @@ public class Retangulo {
 
 	public void setAltura(double altura) {
 		
-		if(largura > 0.0 && largura < 20.0) {
+		if(altura > 0.0 && altura < 20.0) {
 			
 			this.altura = altura;
 			
 		}else {
 			
-			new IllegalArgumentException("A altura deve estar entre 0 e 20");
+			System.out.println(new IllegalArgumentException("A altura deve estar entre 0 e 20"));
 			
 		}
 	}
@@ -52,12 +53,11 @@ public class Retangulo {
 			
 		}else {
 			
-			new IllegalArgumentException("A largura deve estar entre 0 e 20");
+			System.out.println(new IllegalArgumentException("A largura deve estar entre 0 e 20"));
 			
 		}
 		
 	}
-	
 	
 	
 }
