@@ -28,7 +28,16 @@ public class Retangulo {
 	}
 
 	public void setAltura(double altura) {
-		this.altura = altura;
+		
+		if(largura > 0.0 && largura < 20.0) {
+			
+			this.altura = altura;
+			
+		}else {
+			
+			new IllegalArgumentException("A altura deve estar entre 0 e 20");
+			
+		}
 	}
 
 	public double getLargura() {
@@ -36,7 +45,17 @@ public class Retangulo {
 	}
 
 	public void setLargura(double largura) {
-		this.largura = largura;
+		
+		if(largura > 0.0 && largura < 20.0) {
+			
+			this.largura = largura;
+			
+		}else {
+			
+			new IllegalArgumentException("A largura deve estar entre 0 e 20");
+			
+		}
+		
 	}
 	
 	
