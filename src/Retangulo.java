@@ -4,7 +4,6 @@ public class Retangulo {
 	private double altura;
 	private double largura;
 	
-	
 	public Retangulo() {
 		this(1, 1);
 	}
@@ -40,7 +39,6 @@ public class Retangulo {
 			System.out.println(e.getMessage());
 			
 		}
-		
 		
 	}
 
