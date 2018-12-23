@@ -61,8 +61,6 @@ public class Retangulo {
 			
 		}
 		
-		
-		
 	}
 	
 	public void testaLimite(Double lado) {
