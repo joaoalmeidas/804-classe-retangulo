@@ -10,8 +10,8 @@ public class Retangulo {
 	
 	public Retangulo(double altura, double largura) {
 		super();
-		this.altura = altura;
-		this.largura = largura;
+		setAltura(altura);
+		setLargura(largura);
 	}
 	
 	public double calculaArea() {
